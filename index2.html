@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "../build/three.module.js",
+                "three/addons/": "./jsm/"
+            }
+        }
+    </script>
+<script>
+    function displayCube(){
+       document.getElementById("a").style.display="none";
+       document.getElementById("b").style.display="none";
+       document.getElementById("h").style.display="block";
+    }
+
+
+    function displaySphere(){
+        document.getElementById("a").style.display="none";
+       document.getElementById("b").style.display="block";
+       document.getElementById("h").style.display="none";
+    }
+
+    function displayPyramid(){
+        document.getElementById("a").style.display="block";
+       document.getElementById("b").style.display="none";
+       document.getElementById("h").style.display="none";
+    }
+</script>
+ 
+    <button onclick="displayCube()">Cube</button>
+    <button onclick="displaySphere()">Sphere</button>
+    <button onclick="displayPyramid()">Pyramid</button>
+    <script type="module" src="./js/Sphere.js"></script>
+    <script type="module" src="./js/Pyramid.js"></script>
+    <script type="module" src="./js/threejs_training.js"></script> 
+
+<div id="h">
+    <div class="fullpage" id="MyCanvas"></div>
+
+</div>
+<div id="a">
+    <div class="fullpage" id="abc"></div>
+
+</div>
+<div id="b">
+
+    <div class="fullpage" id="HELLO"></div>
+</div>
+
+    
+  
+</body>
+</html>
